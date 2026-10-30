@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@theme {
+  --color-background: #211d0a;
+  --color-deep: #171505;
+  --color-panel: #4a3d08;
+  --color-brand: #f2c811;
+  --color-brand-soft: #fff2a6;
+  --color-foreground: #fffdf2;
+}
+:root { font-family: 'Segoe UI', Arial, sans-serif; font-synthesis: none; }
+body { margin: 0; background: var(--color-background); color: var(--color-foreground); line-height: 1.7; }
+html { scroll-behavior: smooth; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 3px; }
