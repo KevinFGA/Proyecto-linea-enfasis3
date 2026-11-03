@@ -5,5 +5,15 @@ import { caseItems } from '../data/content';
 
 export default function CasesView() {
   const { t } = useTranslation();
-  return <><Hero title={t('cases.heading')} /><ItemGrid items={caseItems} /></>;
+
+  return (
+    <>
+      <Hero
+        label="SYSTEM / 03 · CASES"
+        title={t('cases.heading')}
+        description={t('cases.description')}
+      />
+      <ItemGrid prefix="CASES" items={caseItems} />
+    </>
+  );
 }

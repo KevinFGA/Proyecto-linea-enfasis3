@@ -1,7 +1,7 @@
 export const navigationItems = [
-  { key: 'home', path: '/', icon: '🏠' },
-  { key: 'topics', path: '/temas', icon: '📚' },
-  { key: 'concepts', path: '/conceptos', icon: '💡' },
-  { key: 'cases', path: '/casos-practicos', icon: '🧩' },
-  { key: 'project', path: '/proyecto', icon: '🎥' },
+  { key: 'home', path: '/', icon: 'terminal' },
+  { key: 'topics', path: '/temas', icon: 'book' },
+  { key: 'concepts', path: '/conceptos', icon: 'layers' },
+  { key: 'cases', path: '/casos-practicos', icon: 'code' },
+  { key: 'project', path: '/proyecto', icon: 'folder' },
 ];

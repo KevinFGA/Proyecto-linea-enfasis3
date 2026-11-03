@@ -5,5 +5,15 @@ import { topicItems } from '../data/content';
 
 export default function TopicsView() {
   const { t } = useTranslation();
-  return <><Hero title={t('topics.heading')} /><ItemGrid items={topicItems} /></>;
+
+  return (
+    <>
+      <Hero
+        label="SYSTEM / 01 · TOPICS"
+        title={t('topics.heading')}
+        description={t('topics.description')}
+      />
+      <ItemGrid prefix="TOPICS" items={topicItems} />
+    </>
+  );
 }

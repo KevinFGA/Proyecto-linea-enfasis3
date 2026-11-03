@@ -5,5 +5,15 @@ import { conceptItems } from '../data/content';
 
 export default function ConceptsView() {
   const { t } = useTranslation();
-  return <><Hero title={t('concepts.heading')} /><ItemGrid items={conceptItems} /></>;
+
+  return (
+    <>
+      <Hero
+        label="SYSTEM / 02 · CONCEPTS"
+        title={t('concepts.heading')}
+        description={t('concepts.description')}
+      />
+      <ItemGrid prefix="CONCEPTS" items={conceptItems} />
+    </>
+  );
 }
