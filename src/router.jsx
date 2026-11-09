@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import MainLayout from './layouts/MainLayout';
 
@@ -11,7 +11,7 @@ const NotFoundView = lazy(() => import('./views/NotFoundView'));
 
 const withSuspense = (Component) => <Suspense fallback={<div role="status" className="p-8 text-center">Cargando…</div>}><Component /></Suspense>;
 
-export const router = createBrowserRouter([{ element: <MainLayout />, children: [
+export const router = createHashRouter([{ element: <MainLayout />, children: [
   { path: '/', element: withSuspense(HomeView) },
   { path: '/temas', element: withSuspense(TopicsView) },
   { path: '/conceptos', element: withSuspense(ConceptsView) },
