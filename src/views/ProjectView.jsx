@@ -18,14 +18,19 @@ export default function ProjectView() {
     0,
   );
 
+  // Ruta compatible con Vite y GitHub Pages
+  const videoUrl = `${import.meta.env.BASE_URL}videos/proyecto-final.mp4`;
+
   return (
     <>
+      {/* ENCABEZADO PRINCIPAL */}
       <Hero
         label="ACADEMIC / COURSE"
         title="Línea de Énfasis III"
         description="Información académica del curso, unidades de aprendizaje, actividades evaluativas y espacio para el proyecto final."
       />
 
+      {/* OBJETIVOS DEL CURSO */}
       <section className="cyber-panel mt-7 rounded-xl p-7">
         <p className="mono text-xs font-bold text-brand">
           UNIREMINGTON / OBJETIVOS
@@ -46,6 +51,7 @@ export default function ProjectView() {
                 size={25}
                 className="mb-4 text-brand"
               />
+
               <p className="text-sm leading-7 text-[#c5d4d3]">
                 {objective}
               </p>
@@ -58,6 +64,7 @@ export default function ProjectView() {
         </p>
       </section>
 
+      {/* PLAN DE ESTUDIO */}
       <section className="mt-10">
         <h2 className="text-2xl font-bold text-white">
           Plan de estudio
@@ -90,6 +97,7 @@ export default function ProjectView() {
                       size={16}
                       className="mt-1 shrink-0 text-brand"
                     />
+
                     <span>{topic}</span>
                   </li>
                 ))}
@@ -103,6 +111,7 @@ export default function ProjectView() {
         </p>
       </section>
 
+      {/* ACTIVIDADES EVALUATIVAS */}
       <section className="cyber-panel mt-10 overflow-hidden rounded-xl">
         <div className="border-b border-[#30423f] p-6">
           <p className="mono text-xs text-brand">
@@ -139,9 +148,11 @@ export default function ProjectView() {
                   <td className="px-6 py-4 text-white">
                     {item.name}
                   </td>
+
                   <td className="px-6 py-4 text-[#b7c9cb]">
                     {item.week}
                   </td>
+
                   <td className="px-6 py-4 font-bold text-brand">
                     {item.percentage}%
                   </td>
@@ -151,9 +162,14 @@ export default function ProjectView() {
 
             <tfoot className="border-t border-[#49604d] bg-[#17251f]">
               <tr>
-                <th scope="row" colSpan={2} className="px-6 py-4 text-white">
+                <th
+                  scope="row"
+                  colSpan={2}
+                  className="px-6 py-4 text-white"
+                >
                   Total
                 </th>
+
                 <td className="px-6 py-4 font-bold text-brand">
                   {totalPercentage}%
                 </td>
@@ -169,6 +185,7 @@ export default function ProjectView() {
         </p>
       </section>
 
+      {/* PROYECTO FINAL */}
       <section className="cyber-panel mt-10 rounded-xl p-7">
         <p className="mono text-xs text-brand">
           FINAL PROJECT / WORKSPACE
@@ -203,6 +220,72 @@ export default function ProjectView() {
               La estructura propuesta para documentar el proyecto
               es una sugerencia de organización de esta web.
             </p>
+          </div>
+        </div>
+
+        {/* VIDEO EXPLICATIVO */}
+        <div className="mt-8 border-t border-[#30423f] pt-7">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="mono text-xs font-bold text-brand">
+                PROJECT / VIDEO PRESENTATION
+              </p>
+
+              <h3 className="mt-3 text-xl font-bold text-white">
+                Video explicativo del proyecto
+              </h3>
+
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#b8c9c9]">
+                Presentación audiovisual de tres minutos sobre
+                el proyecto final, sus objetivos, metodología,
+                desarrollo y principales resultados.
+              </p>
+            </div>
+
+            <span className="mono rounded-lg border border-[#395b36] bg-[#122319] px-4 py-2 text-xs font-bold text-brand">
+              VIDEO / 03:00 MIN
+            </span>
+          </div>
+
+          {/* REPRODUCTOR */}
+          <div className="mt-6 overflow-hidden rounded-xl border border-[#30453c] bg-black">
+            <video
+              className="aspect-video w-full bg-black"
+              controls
+              preload="metadata"
+              playsInline
+              aria-label="Video explicativo del proyecto final"
+            >
+              <source
+                src={videoUrl}
+                type="video/mp4"
+              />
+
+              Tu navegador no admite la reproducción de videos HTML5.
+            </video>
+          </div>
+
+          {/* INFORMACIÓN DEL VIDEO */}
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#30453c] bg-[#101d20] text-brand">
+                ▶
+              </span>
+
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  Presentación del proyecto final
+                </p>
+
+                <p className="text-xs text-[#94a8aa]">
+                  Formato MP4 · Duración aproximada: 3 minutos
+                </p>
+              </div>
+            </div>
+
+            <span className="mono text-xs text-[#94a8aa]">
+              CYBER//LAB / ACADEMIC PROJECT
+            </span>
           </div>
         </div>
       </section>
